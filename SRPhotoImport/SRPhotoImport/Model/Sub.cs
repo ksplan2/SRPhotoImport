@@ -12,7 +12,7 @@ using System.Drawing.Imaging;
 
 namespace SRPhotoImport.Model
 {
-    class Sub
+   public class Sub
     {
         public static void Photoload(string path, int EID)
         {
