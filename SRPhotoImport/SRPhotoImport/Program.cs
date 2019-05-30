@@ -22,7 +22,8 @@ namespace SRPhotoImport
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
 
-            using (var sr = new StreamReader(@"C:\Users\ksplan2\Documents\StarRezPhotoImport\NoPhoto.csv"))
+            //Path to file dropped with residents with no photo in StarRez.
+            using (var sr = new StreamReader(@"\NoPhoto.csv"))
             {
                 var reader = new CsvReader(sr);
 
@@ -46,6 +47,7 @@ namespace SRPhotoImport
                 int entryID;
                 string status;
 
+                //This is the mapped drive location to  photo repository.
                 string[] dirs = Directory.GetFiles(@"Y:\", "*.JPG");
 
                 Console.WriteLine("The number or jpeg files is  {0}.", dirs.Length);
